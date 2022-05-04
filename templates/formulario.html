@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="jquery.ui.datepicker-es.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'formulario.css')}}"/>
+    <title>BusquedaTrabajo</title>
+</head>
+<body>
+    <script src="{{url_for('static' , filename= 'formulario.js')}}"></script>
+     
+    <div id="svg_wrap"></div>
+
+    <h1 class=>Ayudanos a crear tu Curriculum &#128196</h1>
+  
+    
+  <form autocomplete="on" action="/api/agregardatos" method="POST">
+<section>
+  <p>Cuéntanos un poco sobre vos   &#9997 &#129321</p>
+  <input type="text" name="nombre" placeholder="Nombre" />
+  <input type="text" name="apellido" placeholder="Apellido" />
+  <p>Fecha de Nacimiento &#128197 &#127881</p>
+ <input type="date" name="fecha_nac" placeholder="Fecha de Nacimiento"/>
+ <textarea name="sobre_mi" id="" cols="30" rows="10" placeholder="Un poco sobre vos"></textarea>
+</section>
+
+<section>
+  <p>¿De donde sos ? &#127968 &#128205 </p>
+    <div class="autocomplete" style="width:300px;">
+      <input id="myInput" name="departamento"type="text" placeholder="Departamento">
+    </div>
+  <input type="text" name="localidad" placeholder="Ciudad/Distrito" />
+</section>
+
+<section>
+  <p>¿Como podemos contactarte? &#128241 &#128231	</p>
+  <input type="text" name="email" placeholder="Direccion Email" />
+  <input type="text" name="num_tel"  placeholder="Celular" />
+</section>
+
+<section>
+  <p>Si ya trabajaste antes ¿Cual es tu experiencia? &#129309	&#128084	</p> <br>
+  <input type="text" name="nomempresa1" placeholder="¿Como se llamaba tu lugar de trabajo? " /> <br>
+  <p>Fecha de Ingreso &#128197 &#10549</p><br>
+  <input type="text" name="puesto1" placeholder="¿Nombre del Puesto? " /> <br>
+  <input type="date" name="añoinicio1" placeholder="Fecha de Ingreso"  id="datepicker"><br>
+  <p>Fecha de Salida &#128197 &#10548</p><br>
+  <input type="date" name="añofin1" placeholder="Fecha de Salida"  id="datepicker">
+  <input type="text" name="actrealiz1" placeholder="Actividad Realizada " />
+</section>
+<section>
+  <p>Algunas referencias  &#129309	&#128084	 </p>
+  <p>Refenrencia laboral &#128084 </p>
+  <input type="text" name="nombreref1" placeholder="¿Como se llama? " />
+  <input type="text" name= "empresaref1" placeholder="¿Lugar de trabajo?">
+  <input type="text" name="contactoref1"  placeholder="Numero de Contacto">
+  <p>Referencia laboral &#128084</p>
+  <input type="text"  name="nombreref2" placeholder="¿Como se llama? " />
+  <input type="text" name= "empresaref2" placeholder="¿Lugar de trabajo?">
+  <input type="text" name="contactoref2" placeholder="Numero de Contacto">
+  <p>Referencia personal &#9996</p>
+  <input type="text" name="nombreref3" placeholder="¿Como se llama? " />
+  <input type="text" name= "empresaref3" placeholder="¿Lugar de trabajo?">
+  <input type="text" name="contactoref3" placeholder="Numero de Contacto">
+  
+</section>
+
+<section>
+  <p>¿Que formación academica tuviste? &#128221 &#128218</p>
+  <input type="text" name="enteduc1" placeholder=" Educacion Primaria " />
+  <p> Fecha de Culminación &#128197 &#128282</p>
+  <input type="date" name="año1form" placeholder="Fecha de Culminacion " />
+  <input  type="text" name="enteduc2" placeholder="Educacion Secundaria " />
+  <p> Fecha de Culminación &#128197 &#128282</p>
+  <input type="date" name="año2form" placeholder="Fecha de Culminacion " />
+  <input  type="text"  name="enteduc3" placeholder="Educacion Superior " />
+  <p> Fecha de Culminación &#128197 &#128282</p>
+  <input type="date" name="año3form" placeholder="Fecha de Culminacion " />
+ 
+  
+</section>
+<section>
+  <p>Idiomas</p>
+
+    <p>Primer Idioma &#127758</p>
+    <select name="idioma1" id="cars">
+      <option value=" "></option>
+      <option value="Español">Español</option>
+      <option value="Ingles">Inglés</option>
+      <option value="Aleman">Aleman</option>
+      <option value="Chino Mandarin">Chino Mandarin</option>
+    </select>
+    <select name="idiomanivel1" id="cars">
+      <option value=" "></option>
+      <option value="Basico">Basico</option>
+      <option value="Intermedio">Intermedio</option>
+      <option value="Avanzado">Avanzado</option>
+      <option value="Nativo">Nativo</option>
+    </select>
+    <p>Segundo Idioma &#127758</p>
+    <select name="idioma2" id="cars">
+      <option value=" "></option>
+      <option value="Español">Español</option>
+      <option value="Ingles">Inglés</option>
+      <option value="Aleman">Aleman</option>
+      <option value="Chino Mandarin">Chino Mandarin</option>
+    </select>
+    <select name="idiomanivel2" id="cars">
+      <option value=" "></option>
+      <option value="Basico">Basico</option>
+      <option value="Intermedio">Intermedio</option>
+      <option value="Avanzado">Avanzado</option>
+      <option value="Nativo">Nativo</option>
+    </select>
+    <p>Tercer Idioma &#127758</p>
+    <select name="idioma3" id="cars">
+      <option value=" "> </option>
+      <option value="Español">Español</option>
+      <option value="Inglés">Inglés</option>
+      <option value="Aleman">Aleman</option>
+      <option value="Chino Mandarin">Chino Mandarin</option>
+      <option value="Guaraní">Guaraní </option>
+    </select>
+    <select name="idiomanivel3" id="cars">
+      <option value=" "> </option>
+      <option value="Basico">Basico</option>
+      <option value="Intermedio">Intermedio</option>
+      <option value="Avanzado">Avanzado</option>
+      <option value="Nativo">Nativo</option>
+    </select>
+
+</section>
+<section>
+  <section style="display: grid !important">
+    <label for="cars">¿Habilidades en Ofimática? ¿Cuáles?  &#128187 </label>
+    <select name="soft1" id="cars">
+      <option value=" "></option>
+      <option value="Microsoft Excel">Microsoft Excel</option>
+      <option value="Microsoft Word">Microsoft Word</option>
+      <option value="Microsoft Paint">Microsoft Paint</option>
+
+    </select>
+    <select name="soft2" id="cars">
+      <option value=" "></option>      
+      <option value="Microsoft Excel">Microsoft Excel</option>
+      <option value="Microsoft Word">Microsoft Word</option>
+      <option value="Microsoft Paint">Microsoft Paint</option>
+    </select>
+
+    <select name="soft3" id="cars">
+      <option value=" "></option>
+      <option value="Microsoft Excel">Microsoft Excel</option>
+      <option value="Microsoft Word">Microsoft Word</option>
+      <option value="Microsoft Paint">Microsoft Paint</option>
+    </select>
+    
+    <label for="cars">Tus principales virtudes  &#129505 </label> <br>
+    <select name="virtud1" id="cars"><br>
+      <option value=" "></option><br>
+      <option value="Honestidad">Honestidad</option><br>
+      <option value="Lealtad">Lealtad</option><br>
+      <option value="Puntualidad">Puntualidad</option>
+    </select>
+    
+    <select name="virtud2" id="cars">
+      <option value=" "></option>
+      <option value="Honestidad">Honestidad</option>
+      <option value="Lealtad">Lealtad</option>
+      <option value="Puntualidad">Puntualidad</option>
+    </select>
+    
+    <select name="virtud3" id="cars">      
+      <option value=" "></option>
+      <option value="Honestidad">Honestidad</option>
+      <option value="Lealtad">Lealtad</option>
+      <option value="Puntualidad">Puntualidad</option>
+    </select>
+    
+    <label for="cars">Más sobre tus habilidades en el trabajo  &#128188  </label>
+    <select name="hab1" id="cars">
+      <option value=" "></option>
+      <option value="Trabajo En Equipo">Trabajo en Equipo</option>
+      <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
+      <option value="Enfoque en objetivos">Enfoque en objetivos</option>
+    </select>
+    
+    <select name="hab2" id="cars">
+      <option value=" "></option>
+      <option value="Trabajo En Equipo">Trabajo en Equipo</option>
+      <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
+      <option value="Enfoque en objetivos">Enfoque en objetivos</option>
+    </select>
+    
+    <select name="hab3" id="cars">
+      <option value=" "></option>
+      <option value="Trabajo En Equipo">Trabajo en Equipo</option>
+      <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
+      <option value="Enfoque en objetivos">Enfoque en objetivos</option>
+    </select>
+
+</section>
+<section>
+  <p1>Foto para el CV &#128248</p1>
+  <input type="file" accept="image/*" class="subida" />
+</section>
+
+
+  <section class="centro">
+  
+    <iframe class = "video" width="560" height="315" src="https://www.youtube.com/embed/ly36kn0ug4k" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+  </section>
+
+<div class="button" id="prev">&larr; Atras</div>
+<div class="button" id="next">Siguiente &rarr;</div>
+<input class="button" value="Aceptar y Generar CV" id="submit" type="submit"/>
+
+</form>
+
+<body>
+
+
+
+
+<script>
+  $(function () {
+  $("#datepicker").datepicker();
+  });
+
+  
+jQuery(function ($) {
+  $.datepicker.regional['es'] = {
+  closeText: 'Cerrar',
+  prevText: '<Ant',
+  nextText: 'Sig>',
+  currentText: 'Hoy',
+  monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+  'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+  monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+  'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+  dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+  dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié;', 'Juv', 'Vie', 'Sáb'],
+  dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+  weekHeader: 'Sm',
+  dateFormat: 'dd/mm/yy',
+  firstDay: 1,
+  isRTL: false,
+  showMonthAfterYear: false,
+  yearSuffix: ''
+  };
+  $.datepicker.setDefaults($.datepicker.regional['es']);
+  });
+
+
+$(function () {
+$.datepicker.setDefaults($.datepicker.regional["es"]);
+$("#datepicker").datepicker({
+firstDay: 1
+});
+});
+
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+  }
+  
+  /*An array containing all the country names in the world:*/
+  // var countries = ["Alto Paraguay","Alto Paraná","Amambay","Boquerón","Caaguazú","Caazapá","Canindeyú"];
+var countries = []
+
+  fetch('https://apy-app.herokuapp.com/api/departamentos')
+    .then(response => {
+      return response.json()
+    })
+    .then(responseJson => {
+      console.log(responseJson)
+      countries = responseJson.data.map(country => {
+        return country.name
+      })
+      console.log(countries)
+      autocomplete(document.getElementById("myInput"), countries);
+    })
+
+    
+
+  
+  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>

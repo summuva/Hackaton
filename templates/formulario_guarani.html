@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="jquery.ui.datepicker-es.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'formulario.css')}}"/>
+    <title>Rembiaporehegua</title>
+</head>
+<body>
+    <script src="{{url_for('static' , filename= 'formulario.js')}}"></script>
+     
+    <div id="svg_wrap"></div>
+
+    <h1>Oreipytyvõ jajapohaguã oñondive nde tekove arandupy &#128196</h1>
+  
+    
+  <form autocomplete="on" action="/api/agregardatos" method="POST">
+<section>
+  <p>Emombe'umi oreve mbykymi ndereheguá   &#9997 &#129321</p>
+  <input type="text" name="nombre" placeholder="Rera" />
+  <input type="text" name="apellido" placeholder="Rerajoapy" />
+  <p>Aramboty &#128197 &#127881</p>
+ <input type="date" name="fecha_nac" placeholder="Aramboty"/>
+ <textarea name="sobre_mi" id="" cols="30" rows="10" placeholder="Mbykymi ndereheguá"></textarea>
+</section>
+
+<section>
+  <p>¿Moõguá nde ? &#127968 &#128205 </p>
+    <div class="autocomplete" style="width:300px;">
+      <input id="myInput" name="departamento"type="text" placeholder="Tetãvore">
+    </div>
+  <input type="text" name="localidad" placeholder="Táva" />
+</section>
+
+<section>
+  <p>¿Mba'éicha ikatu rotopa? &#128241 &#128231	</p>
+  <input type="text" name="email" placeholder="Pareha" />
+  <input type="text" name="num_tel"  placeholder="Pumbyry" />
+</section>
+
+<section>
+  <p>Oĩmeramo remba'apoma ra'e  ¿Mba'e nde rembiasakue ha mba'epepa ndekatupyryve? &#129309	&#128084	 </p>
+  <input type="text" name="nomempresa1" placeholder="¿Mba'eicha hera remba'apohaguépe? " />
+  <p>Ára reyke ñepyrũhague &#128197 &#10549</p>
+  <input type="date" name="añoinicio1" placeholder="Ára reike"  id="datepicker">
+  <p>Ára rejeihagué pe mba'apo haguegui &#128197 &#10548</p>
+  <input type="date" name="añofin1" placeholder="Ára rejeihagué"  id="datepicker">
+  <input type="text" name="actrealiz1" placeholder="Mba'e rejapoakue " />
+  </div>
+ 
+
+</section>
+<section>
+  <p> Rembiasakue &#129309	&#128084	 </p>
+  <p>Tekove ikatuva oñangapyhy nde rembiasakue remba'apohaguepe yma &#128084 </p>
+  <input type="text" name="nombreref1" placeholder="¿Mba'eicha hera? " />
+  <input type="text" name= "empresaref1" placeholder="¿Moõ ha'e omba'apo?">
+  <input type="text" name="contactoref1"  placeholder="Pumbyry">
+  <p>Tekove ikatuva oñangapyhy nde rembiasakue remba'apohaguepe yma &#128084</p>
+  <input type="text"  name="nombreref2" placeholder="¿Mba'eicha hera? " />
+  <input type="text" name= "empresaref1" placeholder="¿Moõ ha'e omba'apo?">
+  <input type="text" name="contactoref2" placeholder="Pumbyry">
+  <p>Tekove ikatuva oñangapyhy nde rembiasakue &#9996</p>
+  <input type="text" name="nombreref3" placeholder="¿Mba'eicha hera? " />
+  <input type="text" name= "empresaref1" placeholder="¿Moõ ha'e omba'apo?">
+  <input type="text" name="contactoref1" placeholder="Pumbyry">
+  
+</section>
+
+<section>
+  <p>¿Mba'e eñembo'e va'ekue? &#128221 &#128218</p>
+  <input type="text" name="enteduc1" placeholder=" Mbo'ehao " />
+  <p> Ára rejeihagué &#128197 &#128282</p>
+  <input type="date" name="añofin1" placeholder="Ára" />
+  <input  type="text"  name="enteduc3" placeholder="Moõ reho va'ekue ñemboe' mbyteha " />
+  <input  type="text" name="enteduc2" placeholder="Moõ reho va'ekue mbo'ehao pe " />
+  <p> Ára rejeihagué  &#128197 &#128282</p>
+  <input type="date" name="añofin2" placeholder="Ára" />
+  <input  type="text"  name="enteduc3" placeholder="Moõ reho va'ekue ñemboe' mbyteha " />
+  <p> Ára rejeihagué &#128197 &#128282</p>
+  <input type="date" name="añofin3" placeholder="Ára " />
+ 
+  
+</section>
+<section>
+  <p>Ñe'e</p>
+
+    <p>Ñe'e Ypy &#127758</p>
+    <select name="idioma1" id="cars">
+      <option value=" "></option>
+      <option value="Español">Español</option>
+      <option value="Ingles">Inglés</option>
+      <option value="Aleman">Aleman</option>
+      <option value="Chino Mandarin">Chino Mandarin</option>
+    </select>
+    <select name="idiomanivel1" id="cars">
+      <option value=" "></option>
+      <option value="Basico">Aikuaamimi</option>
+      <option value="Intermedio">Aikuaa</option>
+      <option value="Avanzado">Aikuaa porã</option>
+      <option value="Nativo">Aikuaa paite </option>
+    </select>
+    <p>Ñe'e mokõiha &#127758</p>
+    <select name="idioma2" id="cars">
+      <option value=" "></option>
+      <option value="Español">Español</option>
+      <option value="Ingles">Inglés</option>
+      <option value="Aleman">Aleman</option>
+      <option value="Chino Mandarin">Chino Mandarin</option>
+    </select>
+    <select name="idiomanivel2" id="cars">
+      <option value=" "></option>
+      <option value="Basico">Aikuaamimi</option>
+      <option value="Intermedio">Aikuaa</option>
+      <option value="Avanzado">Aikuaa porã</option>
+      <option value="Nativo">Aikuaa paite</option>
+    </select>
+    <p>Ñe'e mbohapyha &#127758</p>
+    <select name="idioma3" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Español</option>
+      <option value="Word">Inglés</option>
+      <option value="opel">Aleman</option>
+      <option value="opel">Chino Mandarin</option>
+    </select>
+    <select name="idiomanivel3" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Aikuaamimi</option>
+      <option value="Word">Aikuaa</option>
+      <option value="opel">Aikuaa porã</option>
+      <option value="opel">Aikuaa paite</option>
+    </select>
+
+</section>
+<section>
+  <p>¿Kombutadóra Katypy? &#128221 &#128218</p>
+  
+
+    <label for="cars">¿Kombutadóra Katypy?   &#128187 </label>
+    <select name="hab1" id="cars">
+      <option value=" "></option>
+      <option value="Excel">Microsoft Excel</option>
+      <option value="Word">Microsoft Word</option>
+      <option value="opel">Microsoft Paint</option>
+
+    </select>
+
+    <select name="hab2" id="cars">
+      <option value=" "></option>
+      <option value="Excel">Microsoft Excel</option>
+      <option value="Word">Microsoft Word</option>
+      <option value="opel">Microsoft Paint</option>
+    </select>
+
+    <select name="hab3" id="cars">
+      <option value=" "></option>
+      <option value="Excel">Microsoft Excel</option>
+      <option value="Word">Microsoft Word</option>
+      <option value="opel">Microsoft Paint</option>
+    </select>
+    <label for="cars">Mba'epe nde marangatu  &#129505 </label>
+    <select name="virtud1" id="cars">
+      <option value=" "></option>
+      <option value="Honestidad">Mbotavy'ỹ</option>
+      <option value="Lealtad">Jeroviapy</option>
+      <option value="Puntualidad">Reguahe aravoitepe</option>
+    </select>
+    
+    <select name="virtud2" id="cars">
+      <option value=" "></option>
+      <option value="Honestidad">Mbotavy'ỹ</option>
+      <option value="Lealtad">Jeroviapy</option>
+      <option value="Puntualidad">Reguahe aravoitepe</option>
+    </select>
+    
+    <select name="virtud3" id="cars">      
+      <option value=" "></option>
+      <option value="Honestidad">Mbotavy'ỹ</option>
+      <option value="Lealtad">Jeroviapy</option>
+      <option value="Puntualidad">Reguahe aravoitepe</option>
+    </select>
+    
+    <label for="cars">Emombe'uve oreve mba'epepa nde katupyryha remba'apohape  &#128188  </label>
+    <select name="hab1" id="cars">
+      <option value=" "></option>
+      <option value="Trabajo En Equipo">Remba'apokuaa Atype</option>
+      <option value="Trabajo bajo Presión">Remba'apokua jopype</option>
+      <option value="Enfoque en objetivos">Ekuaa mba'e ehopytysea</option>
+    </select>
+    
+    <select name="hab2" id="cars">
+      <option value=" "></option>
+      <option value="Trabajo En Equipo">Remba'apokuaa Atype</option>
+      <option value="Trabajo bajo Presión">Remba'apokua jopype</option>
+      <option value="Enfoque en objetivos">Ekuaa mba'e ehopytysea</option>
+    </select>
+    
+    <select name="hab3" id="cars">
+      <option value=" "></option>
+      <option value="Trabajo En Equipo">Remba'apokuaa Atype</option>
+      <option value="Trabajo bajo Presión">Remba'apokuaa jopype</option>
+      <option value="Enfoque en objetivos">Eikuaa mba'e ehupytysea</option>
+    </select>
+
+
+</section>
+<section>
+  <p1>Ta'anga tekove arandupype guarã &#128248</p1>
+  <input type="file" accept="image/*" class="subida" />
+</section>
+
+<section class="centro">
+  
+  <iframe class = "video" width="560" height="315" src="https://www.youtube.com/embed/ly36kn0ug4k" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+</section>
+
+  <div class="button" id="prev">&larr; Atras</div>
+<div class="button" id="next">Siguiente &rarr;</div>
+<input class="button" value="Emondo Tekove arandupy" id="submit" type="submit"/>
+
+</form>
+
+
+
+
+
+
+<script>
+  $(function () {
+  $("#datepicker").datepicker();
+  });
+
+  
+jQuery(function ($) {
+  $.datepicker.regional['es'] = {
+  closeText: 'Cerrar',
+  prevText: '<Ant',
+  nextText: 'Sig>',
+  currentText: 'Hoy',
+  monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+  'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+  monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+  'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+  dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+  dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié;', 'Juv', 'Vie', 'Sáb'],
+  dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+  weekHeader: 'Sm',
+  dateFormat: 'dd/mm/yy',
+  firstDay: 1,
+  isRTL: false,
+  showMonthAfterYear: false,
+  yearSuffix: ''
+  };
+  $.datepicker.setDefaults($.datepicker.regional['es']);
+  });
+
+
+$(function () {
+$.datepicker.setDefaults($.datepicker.regional["es"]);
+$("#datepicker").datepicker({
+firstDay: 1
+});
+});
+
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+  }
+  
+  /*An array containing all the country names in the world:*/
+  // var countries = ["Alto Paraguay","Alto Paraná","Amambay","Boquerón","Caaguazú","Caazapá","Canindeyú"];
+var countries = []
+
+  fetch('https://apy-app.herokuapp.com/api/departamentos')
+    .then(response => {
+      return response.json()
+    })
+    .then(responseJson => {
+      console.log(responseJson)
+      countries = responseJson.data.map(country => {
+        return country.name
+      })
+      console.log(countries)
+      autocomplete(document.getElementById("myInput"), countries);
+    })
+
+    
+
+  
+  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>
+
+
+
+
+
+

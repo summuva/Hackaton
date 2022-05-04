@@ -1,0 +1,302 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Adventure</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{{url_for('static' , filename= 'css/linearicons.css')}}">
+			<link rel="stylesheet" href="{{url_for('static' , filename= 'css/font-awesome.min.css')}}">
+			<link rel="stylesheet" href="{{url_for('static' , filename= 'css/bootstrap.css')}}">
+			<link rel="stylesheet" href="{{url_for('static' , filename= 'css/magnific-popup.css')}}">
+			<!--<link rel="stylesheet" href="{{url_for('static' , filename= 'css/animate.min.css')}}">-->
+			<link rel="stylesheet" href="{{url_for('static' , filename= 'css/owl.carousel.css')}}">
+			<link rel="stylesheet" href="{{url_for('static' , filename= 'css/main.css')}}">
+		</head>
+		<body>
+			<!-- start banner Area -->
+			<section class="banner-area" id="home">
+				<!-- Start Header Area -->
+				<header class="default-header">
+					<nav class="navbar navbar-expand-lg  navbar-light">
+						<div class="container">
+							<a class="navbar-brand" href="index.html">
+							<img src="{{url_for('static' , filename= 'img/new_logo_jedz.png')}}"alt="">
+							</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="text-white lnr lnr-menu"></span>
+							</button>
+
+							<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+							<ul class="navbar-nav">
+								<li><a href="#home">Inicio</a></li>
+								<li><a href="#about">Nosotros</a></li>									
+								<li><a href="#secvice">Servicios</a></li>
+								<li><a href="#faq">Preguntas</a></li>
+								<!-- Dropdown -->
+							</ul>
+							</div>						
+						</div>
+					</nav>
+				</header>
+				<!-- End Header Area -->				
+			</section>
+
+			<section class="aleatorio">
+				<div class="item-slider relative" style="background: url(/static/img/slider1.jpg);background-size: cover;">
+					<div class="overlay" style="background: rgba(0,0,0,.3)"></div>
+					<div class="container">
+						<div class="row fullscreen justify-content-center align-items-center">
+							<div class="col-md-10 col-12">
+								<div class="banner-content text-center">
+									<h4 class="text-white mb-20 text-uppercase">Encontrar trabajo es mas fácil con:</h4>
+									<h1 class="text-uppercase text-white">Generador de Curriculum Vitae</h1>
+									<p class="text-white">Somos una plataforma dedicada a facilitar el proceso de búsqueda de empleos en Paraguay. </p>
+									<a href="{{url_for('entrada_espanol')}}" class="text-uppercase header-btn" >Acceder en Español</a> 
+									<a href="{{url_for('entrada_guarani')}}" class="text-uppercase header-btn">Eike Guaranime</a>
+								</div>
+							</div>
+				</section>
+
+			<!-- Start about Area -->
+			<section class="section-gap info-area" id="about">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-40 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">¿Porqué usar nuestra plataforma?</h1>
+								<p>Somos gente joven que quiere ayudarte guiandote desde la creación de tu CV, entrenamiento para entrevistas, hasta aplicar a puestos de trabajo que sean de tu interés.</p>
+								<p><p>Ore ha'e tekove pyahu neipytyvosẽva nde kuatia tekove arandupy'apope ñehã'ã ñe'ẽjovakepe, ikatu haguãichã rejepytasõ mbarete mba'apapo yvóra ryepype.</p></p>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</section>
+			<!-- End about Area -->
+			<!-- Start project Area -->
+			<!-- End project Area -->
+
+
+			<!-- Start feature Area -->
+			<section class="feature-area section-gap" id="secvice">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Estas son nuestras funcionalidades:</h1>
+								<p>Buscamos otorgarte una experiencia 360°</p>
+							</div>
+						</div>
+					</div>						
+					<div class="row">
+						<div class="col-lg-4 col-md-6 ">
+							<div class="single-feature mb-30">
+								<div class="title d-flex flex-row pb-20">
+									<span class="lnr lnr-user"></span>
+									<h4><a href="#">Curriculum Vitae</a></h4>
+								</div>
+								<p>
+									Nuestro formulario lo terminarás en menos de 5 minutos y recibirás tu cv en distintas plantillas según tus gustos                
+								</p>							
+							</div>							
+						</div>
+						<div class="col-lg-4 col-md-6 ">
+							<div class="single-feature mb-30">
+								<div class="title d-flex flex-row pb-20">
+									<span class="lnr lnr-license"></span>
+									<h4><a href="#">Tarjeta personal y código QR</a></h4>
+								</div>
+								<p>
+									Queremos ayudarte a tener un diferencial y que puedas expandir tu red de contactos.
+								</p>							
+							</div>							
+						</div>
+						<div class="col-lg-4 col-md-6 ">
+							<div class="single-feature mb-30">
+								<div class="title d-flex flex-row pb-20">
+									<span class="lnr lnr-phone"></span>
+									<h4><a href="#">Entrenamiento para entrevistas</a></h4>
+								</div>
+								<p>
+									Reclutadoras expertas en selección te darán tips para tus entrevistas.
+								</p>							
+							</div>							
+						</div>
+						<div class="col-lg-4 col-md-6 ">
+							<div class="single-feature">
+								<div class="title d-flex flex-row pb-20">
+									<span class="lnr lnr-rocket"></span>
+									<h4><a href="#">Potenciar tus habilidades</a></h4>
+								</div>
+								<p>
+									De acuerdo a tus intereses podrás realizar cursos que te redireccionaremos en los portales más calificados.
+								</p>							
+							</div>							
+						</div>
+						<div class="col-lg-4 col-md-6 ">
+							<div class="single-feature">
+								<div class="title d-flex flex-row pb-20">
+									<span class="lnr lnr-diamond"></span>
+									<h4><a href="#">Bolsa de oportunidades</a></h4>
+								</div>
+								<p>
+									Con tu cv recién creado podrás aplicar a ofertas laborales de todo tipo de rubros.            
+								</p>							
+							</div>							
+						</div>
+						<div class="col-lg-4 col-md-6 ">
+							<div class="single-feature">
+								<div class="title d-flex flex-row pb-20">
+									<span class="lnr lnr-bubble"></span>
+									<h4><a href="#">Accede a nuestra comunidad</a></h4>
+								</div>
+								<p>
+									Únete a nuetra comunidad de ofertas laborales en nuestro canal de telegram.
+								</p>							
+							</div>							
+						</div>																					
+					</div>
+				</div>	
+			</section>
+			<!-- End feature Area -->
+
+
+			<!-- Start gallery Area -->
+			<!-- End gallery Area -->
+			
+			
+			<!-- Start faq Area -->
+			<section class="faq-area section-gap" id="faq">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Preguntas frecuentes</h1>
+								<p>Estas son las consultas mas comunes que solemos tener:</p>
+							</div>
+						</div>
+					</div>							
+					<div class="row d-flex align-items-center">
+						<div class="counter-left col-lg-3 col-md-3">
+							<div class="single-facts">
+								<h2 class="counter">100</h2>
+								<p>CV's Creados</p>							
+							</div>
+							<div class="single-facts">
+								<h2 class="counter">2500</h2>
+								<p>Vacantes publicadas</p>							
+							</div>
+							<div class="single-facts">
+								<h2 class="counter">599</h2>
+								<p>Usuarios Registrados</p>							
+							</div>												
+							<div class="single-facts">
+								<h2 class="counter">130</h2>
+								<p>Clientes satisfechos</p>							
+							</div>
+						</div>	
+						<div class="faq-content col-lg-9 col-md-9">
+							<div class="single-faq">
+								<h2 class="text-uppercase">
+									¿El Servicio tiene algun costo?
+								</h2>
+								<p>
+									No, usar nuestra plataforma no tiene ningun costo. Queremos ayudarte a conseguir tu primer empleo.
+								</p>
+							</div>
+							<div class="single-faq">
+								<h2 class="text-uppercase">
+									¿Como nació la idea de la plataforma?
+								</h2>
+								<p>
+									Todo comenzo en un bootcamp en donde nos presentaron el desafio y vimos la necesidad de que los jovenes cuenten con una plataforma que les ayude en el proceso de conseguir empleo y mejorar su perfil.
+								</p>
+							</div>
+							<div class="single-faq">
+								<h2 class="text-uppercase">
+									¿Es necesario registrarme?
+								</h2>
+								<p>
+									No, no es necesario realizar ningun registro para poder crear tu cv solo necesitas completar el formulario y al final tendras un CV personalizado a tu gusto y elegante que lo que.
+								</p>
+							</div>												
+						</div>									
+					</div>
+				</div>
+			</section>
+			<!-- End faq Area -->
+			
+			
+			<!-- Start Video Area -->
+			<!-- Start Video Area -->
+			
+			
+			<!-- Start logo Area -->
+			<section class="logo-area">
+				<div class="container">
+					<div class="row">
+						
+					</div>
+				</div>	
+			</section>
+			<!-- End logo Area -->
+			<!-- start contact Area -->		
+			<!-- end contact Area -->		
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Sobre Nosotros</h6>
+								<p>
+									Plataforma amigable para ayudarte a conseguir empleo de manera eficiente.
+								</p>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            		<p class="footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Esta plantila fue hecha con <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</div>
+						</div>					
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Siguenos en la redes</h6>
+								<p>Nuestras redes:</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>							
+					</div>
+				</div>
+			</footer>	
+			<!-- End footer Area -->			
+
+			<script src="{{url_for('static' , filename= 'js/vendor/jquery-2.2.4.min.js')}}"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+			<script src="{{url_for('static' , filename= 'js/vendor/bootstrap.min.js')}}"></script>
+			<script src="{{url_for('static' , filename= 'js/jquery.ajaxchimp.min.js')}}"></script>
+			<script src="{{url_for('static' , filename= 'js/jquery.magnific-popup.min.js')}}"></script>	
+			<script src="{{url_for('static' , filename= 'js/owl.carousel.min.js')}}"></script>			
+			<script src="{{url_for('static' , filename= 'js/jquery.sticky.js')}}"></script>
+			<script src="{{url_for('static' , filename= 'js/slick.js')}}"></script>
+			<script src="{{url_for('static' , filename= 'js/jquery.counterup.min.js')}}"></script>
+			<script src="{{url_for('static' , filename= 'js/waypoints.min.js')}}"></script>		
+			<script src="{{url_for('static' , filename= 'js/main.js')}}"></script>	
+		</body>
+	</html>
